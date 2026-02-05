@@ -23,5 +23,5 @@ function observeCarousel(carouselSelector) {
     cards.forEach(card => observer.observe(card));
 }
 
-observeCarousel('.upphovsratt_carousel');
-observeCarousel('.licenser_carousel');
+observeCarousel('.carousel');
+

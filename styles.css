@@ -52,7 +52,6 @@ body {
 .upphovsratt_rubrik,
 .licenser_rubrik {
     font-size: 3rem;
-    margin-top: 3em;
     text-shadow: 4px 4px 8px rgba(140, 137, 137, 0.7);
 }
 
@@ -65,7 +64,7 @@ body {
 .fadeUp {
     animation: fadeUp both;
     animation-timeline: view();
-    animation-range: entry 20% cover 40%;
+    animation-range: entry 20% cover 30%;
 }
 
 @keyframes fadeUp {
@@ -82,9 +81,7 @@ body {
     }
 }
 
-/* Upphovsrätt Carousel Styles */
-
-.upphovsratt_carousel {
+.carousel {
     margin: 2em 5em;
     display: flex;
     overflow-x: auto;
@@ -94,11 +91,11 @@ body {
     scroll-snap-type: x mandatory;
 }
 
-.upphovsratt_carousel::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
     display: none;
 }
 
-.upphovsratt_carousel::scroll-button(right) {
+.carousel::scroll-button(right) {
     content: '→';
     border: none;
     background-color: rgb(3, 3, 78);
@@ -114,7 +111,7 @@ body {
     translate: -50%;
 }
 
-.upphovsratt_carousel::scroll-button(left) {
+.carousel::scroll-button(left) {
     content: '←';
     border: none;
     background-color: rgb(3, 3, 78);
@@ -130,65 +127,13 @@ body {
     translate: 50%;
 }
 
-.upphovsratt_carousel::scroll-button(left):disabled,
-.upphovsratt_carousel::scroll-button(right):disabled {
+.carousel::scroll-button(left):disabled,
+.carousel::scroll-button(right):disabled {
     opacity: 0.5;
     cursor: auto
 }
 
 /* Licenser carousel styles */
-
-.licenser_carousel {
-    margin: 2em 5em;
-    display: flex;
-    overflow-x: auto;
-    gap: 2em;
-    scroll-behavior: smooth;
-    anchor-name: --carousel1;
-    scroll-snap-type: x mandatory;
-}
-
-.licenser_carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.licenser_carousel::scroll-button(right) {
-    content: '→';
-    border: none;
-    background-color: rgb(3, 3, 78);
-    font-size: 2rem;
-    color: white;
-    height: 2em;
-    width: 2em;
-    border-radius: 50%;
-    cursor: pointer;
-    position: fixed;
-    position-anchor: --carousel1;
-    position-area: right center;
-    translate: -50%;
-}
-
-.licenser_carousel::scroll-button(left) {
-    content: '←';
-    border: none;
-    background-color: rgb(3, 3, 78);
-    font-size: 2rem;
-    color: white;
-    height: 2em;
-    width: 2em;
-    border-radius: 50%;
-    cursor: pointer;
-    position: fixed;
-    position-anchor: --carousel1;
-    position-area: left center;
-    translate: 50%;
-}
-
-.licenser_carousel::scroll-button(left):disabled,
-.licenser_carousel::scroll-button(right):disabled {
-    opacity: 0.5;
-    cursor: auto
-}
 
 
 .card {
